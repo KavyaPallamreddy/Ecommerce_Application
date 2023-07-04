@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Superstore{% endblock %}
+{% block content %}
+{% load cart %}
+{% load custom_filter %}
+<!--section start -->
+      <div class="fashion_section">
+         
+			     <div class="container">
+					  <div id='products' class="fashion_section_2">
+					    <div class="row">  
+								<!-- all products -->
+								{% for product in products %}
+								<div class="col-lg-4 col-sm-4">
+								<div class="box_main" id={{product.id}} style="width: 18rem;">
+								  <h4 class="shirt_text">{{product.name}}</h4>
+							      <p class="price_text">Price  <span style="color: #262626;">{{product.price|currency}}</span></p>
+								  <div class="tshirt_img"><img src="{{product.image.url}}"></div>
+									<!-- {{product | is_in_cart:request.session.cart }} -->
+									 <div class="card-footer p-0 no-gutters">
+										{% if product|is_in_cart:request.session.cart %}
+										<div class="row no-gutters">
+											<form action="/#{{product.id}}" class="col-2 " method="post">
+												{% csrf_token %}
+												<input hidden type="text" name='product' value='{{product.id}}'>
+												<input hidden type="text" name='remove' value='True'>
+												<input type="submit" value=" - " class="btn btn-block btn-success border-right">
+											</form>
+											<div class="text-center col btn btn-success">{{product|cart_quantity:request.session.cart}} in Cart</div>
+											<form action="/#{{product.id}}" class="col-2 " method="post">
+												{% csrf_token %}
+												<input hidden type="text" name='product' value='{{product.id}}'>
+												<input type="submit" value=" + " class="btn btn-block btn-success border-left">
+											</form>
+										</div>
+										{% else %}
+										<form action="/#{{product.id}}" method="POST" class="btn-block">
+											{% csrf_token %}
+											<input hidden type="text" name='product' value='{{product.id}}'>
+											<input type="submit" class="btn btn-success form-control"
+												value="Add To Cart">
+										</form>
+										{% endif %}
+									</div>
+								  </div>
+								</div>
+						{% endfor %}
+			       </div>
+		       </div>
+	        </div>
+          </div>
+                               						  
+{% endblock content %}
