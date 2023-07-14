@@ -1,7 +1,7 @@
 FROM python:3
 RUN pip install --upgrade pip
 RUN pip install django==3.2
-RUN pip install -r requirements.txt
+RUN pip install pillow
 RUN python manage.py makemigrations
 RUN python manage.py migrate
 EXPOSE 8000
