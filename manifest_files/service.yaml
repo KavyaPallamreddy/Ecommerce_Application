@@ -8,9 +8,9 @@ metadata:
     app: ecommerce-application
 spec:
   selector:
-    app: ecommerce-application
+    app: ecommerce-applications
   type: NodePort
   ports:
-  - nodePort: 31280
+  - nodePort: 31285
     port: 8000
     targetPort: 8000
