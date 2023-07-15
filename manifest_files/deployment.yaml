@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: ecommerce_application-container
-        image: kavyapallamreddy/ecommerce_application:1
+        image: kavyapallamreddy/ecommerce_application:2
         imagePullPolicy: Always
         resources:
           limits:
