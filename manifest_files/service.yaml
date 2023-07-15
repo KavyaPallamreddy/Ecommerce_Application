@@ -3,12 +3,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ecommerce_application-service
+  name: ecommerce-application-service
   labels:
-    app: ecommerce_application
+    app: ecommerce-application
 spec:
   selector:
-    app: ecommerce_application
+    app: ecommerce-application
   type: NodePort
   ports:
   - nodePort: 31280
