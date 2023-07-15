@@ -3,7 +3,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ecommerce_application-deployment
+  name: ecommerce-application-deployment
 spec:
   replicas: 1
   strategy:
@@ -13,14 +13,14 @@ spec:
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app: ecommerce_application
+      app: ecommerce-application
   template:
     metadata:
       labels:
         app: 
     spec:
       containers:
-      - name: ecommerce_application-container
+      - name: ecommerce-application-container
         image: kavyapallamreddy/ecommerce_application:2
         imagePullPolicy: Always
         resources:
