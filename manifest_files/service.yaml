@@ -1,0 +1,16 @@
+# Service - LoadBalancer
+# # pb-service -lb.yml
+apiVersion: v1
+kind: Service
+metadata:
+  name: ecommerce_application-service
+  labels:
+    app: ecommerce_application
+spec:
+  selector:
+    app: ecommerce_application
+  type: NodePort
+  ports:
+  - nodePort: 31280
+    port: 5000
+    targetPort: 5000
