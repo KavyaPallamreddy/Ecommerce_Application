@@ -2,7 +2,8 @@
 
 
 I created an Ecommerce_Application and automated the end to end process of creating the AWS infrastructure, continuously integrate and deploy the application to AWS EKS Kubernetes Cluster
-"C:\Users\kavya\Videos\Captures\Superstore - Google Chrome 2023-07-14 21-27-53.mp4"
+
+
 ## DEVOPS Continuous integration and Continuous deployment
 ![image](https://github.com/KavyaPallamreddy/Employee_Portal_Application/assets/116321339/c922ea07-a051-4d22-a650-f7ab7068d74e)
 
