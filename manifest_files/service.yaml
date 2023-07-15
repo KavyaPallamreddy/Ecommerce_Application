@@ -12,5 +12,5 @@ spec:
   type: NodePort
   ports:
   - nodePort: 31280
-    port: 5000
-    targetPort: 5000
+    port: 8000
+    targetPort: 8000
