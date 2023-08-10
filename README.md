@@ -13,17 +13,22 @@ To automated the end to end process of Ecommerce_Application and  creating the A
 ![image](https://github.com/KavyaPallamreddy/Employee_Portal_Application/assets/116321339/c922ea07-a051-4d22-a650-f7ab7068d74e)
 
 
+
+![image](https://github.com/KavyaPallamreddy/Ecommerce_Application/assets/116321339/095c5138-69f9-4884-96ab-63e0b44bbe9d)
+
+
+
 ## Prerequisites
 Here are the step-by-step details to set up an end-to-end Jenkins pipeline for an  Ecommerce Application, build the docker image, pushed the docker image to dockerhub using Argo CD deploy to AWS ECR Kubernetes.
 
 ### Prerequisites:
-
- 1. Jenkins server
- 2. Docker
- 3. Kubernetes cluster 
- 4. Argo CD
- 5. Terraform ( To create Jenkins Server on AWS)
- 6. ansible ( To install jenkins,docker)
+ 1. AWS
+ 2. Jenkins server
+ 3. Docker
+ 4. Kubernetes cluster 
+ 5. Argo CD
+ 6. Terraform ( To create Jenkins Server on AWS)
+ 7. ansible ( To install jenkins,docker)
 
 # Steps
 
